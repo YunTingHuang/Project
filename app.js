@@ -1,5 +1,3 @@
-const port = process.env.PORT || 8080;
-
 var express = require('express');
 var path = require('path');
 
@@ -62,10 +60,6 @@ app.use(function (err, req, res) {
     // render the error page
     res.status(err.status || 500);
     res.render('error');
-});
-
-app.listen(port, () => {
-    console.log('Server is up on the port 8080');
 });
 
 module.exports = app;
